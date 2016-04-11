@@ -8,7 +8,8 @@
     // Cache dom and create variables
     cacheDom: function() {
       this.$base = $(".base");
-      this.$rates = $(".rates");
+      this.$ratesCol1 = $("#col1");
+      this.$ratesCol2 = $("#col2");
       this.$selectBase = $(".selectBase");
     },
     // When the value of selctbase changes call make a request bound to this
@@ -19,21 +20,26 @@
     makeRequest: function() {
       var base = this.$selectBase.val();
       this.$base.empty();
-      this.$rates.empty();
+      this.$ratesCol1.empty();
+      this.$ratesCol2.empty();
       var req = $.ajax({
         url: "https://api.fixer.io/latest?base=" + base
       });
       req.done(function(data){
         var baseRate = data.base;
         var exchangeRates = data.rates;
-        console.log(this);
         this.$base.append("<h3>Base rate: " + baseRate + "</h3>");
+        var count = 1;
         for(var key in exchangeRates) {
-          this.$rates.append("<li>" + key + ": " + exchangeRates[key] + "</li>");
+          var col = this.$ratesCol1;
+          if(count % 2 === 0) { col = this.$ratesCol2; }
+          col.append("<li>" + key + ": " + exchangeRates[key] + "</li>");
+          count++;
         }
       }.bind(this));
     }
   }
   // Initiate the app
   currencyExchange.init();
+  currencyExchange.makeRequest();
 })();

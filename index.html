@@ -2,46 +2,63 @@
 <html lang="en">
 <head>
   <title>currency converter</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body>
-  <form>
-    <select class="selectBase">
-      <option value="GBP">GBP</option>
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="AUD">AUD</option>
-      <option value="BRL">BRL</option>
-      <option value="CAD">CAD</option>
-      <option value="CHF">CHF</option>
-      <option value="CNY">CNY</option>
-      <option value="CZK">CZK</option>
-      <option value="DKK">DKK</option>
-      <option value="HKD">HKD</option>
-      <option value="HRK">HRK</option>
-      <option value="HUF">HUF</option>
-      <option value="IDR">IDR</option>
-      <option value="ILS">ILS</option>
-      <option value="INR">INR</option>
-      <option value="JPY">JPY</option>
-      <option value="KRW">KRW</option>
-      <option value="MXN">MXN</option>
-      <option value="MYR">MYR</option>
-      <option value="NOK">NOK</option>
-      <option value="NZD">NZD</option>
-      <option value="PHP">PHP</option>
-      <option value="PLN">PLN</option>
-      <option value="RON">RON</option>
-      <option value="RUB">RUB</option>
-      <option value="SEK">SEK</option>
-      <option value="SGD">SGD</option>
-      <option value="THB">THB</option>
-      <option value="TRY">TRY</option>
-      <option value="ZAR">ZAR</option>
-    </select>
-  </form>
-  <div class="base"></div>
-  <ul class="rates"></ul>
-  <script src="vendors/js/jquery-1.12.3.min.js"></script>
-  <script src="resources/js/app.js"></script>
+  <div class="container">
+    <div class="header">
+      <h1>Currency Exchange App</h1>
+      <form>
+        <select class="selectBase">
+          <option value="GBP">GBP</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="BRL">BRL</option>
+          <option value="CAD">CAD</option>
+          <option value="CHF">CHF</option>
+          <option value="CNY">CNY</option>
+          <option value="CZK">CZK</option>
+          <option value="DKK">DKK</option>
+          <option value="HKD">HKD</option>
+          <option value="HRK">HRK</option>
+          <option value="HUF">HUF</option>
+          <option value="IDR">IDR</option>
+          <option value="ILS">ILS</option>
+          <option value="INR">INR</option>
+          <option value="JPY">JPY</option>
+          <option value="KRW">KRW</option>
+          <option value="MXN">MXN</option>
+          <option value="MYR">MYR</option>
+          <option value="NOK">NOK</option>
+          <option value="NZD">NZD</option>
+          <option value="PHP">PHP</option>
+          <option value="PLN">PLN</option>
+          <option value="RON">RON</option>
+          <option value="RUB">RUB</option>
+          <option value="SEK">SEK</option>
+          <option value="SGD">SGD</option>
+          <option value="THB">THB</option>
+          <option value="TRY">TRY</option>
+          <option value="ZAR">ZAR</option>
+        </select>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col span_1_of_3 rates-container">
+        <div class="base"></div>
+        <div class="rates">
+          <div class="row">
+            <ul class="col span_1_of_2" id="col1"></ul>
+            <ul class="col span_1_of_2" id="col2"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendors/js/jquery-1.12.3.min.js"></script>
+    <script src="resources/js/app.js"></script>
+  </div>
 </body>
 </html>

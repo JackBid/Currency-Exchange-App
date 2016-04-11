@@ -1,0 +1,69 @@
+body{
+  background-color: #212E3B;
+  font-family: "Open Sans", sans-serif;;
+  font-weight: 200;
+  font-size: 18px;
+  color: #D8DDE8;
+  margin: 0;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.col {
+  margin: 0;
+}
+
+.header {
+  background-color: #3F495E;
+  padding : 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+h1{
+  font-size: 200%;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+form {
+  margin: auto;
+}
+
+form select {
+  width: 150px;
+  height: 40px;
+  font-size: 150%;
+  background-color: #fff;
+}
+
+.rates-container {
+  background-color: #3F495E;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  color: #A1ABBF;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
