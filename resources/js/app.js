@@ -1,5 +1,5 @@
 (function(){
-  var currencyExchange = {
+  var currencyValues= {
     // Initiate the app by caching dom and binding events
     init: function() {
       this.cacheDom();
@@ -40,6 +40,42 @@
     }
   }
   // Initiate the app
-  currencyExchange.init();
-  currencyExchange.makeRequest();
+  currencyValues.init();
+  currencyValues.makeRequest();
+
+  var currencyExchanger = {
+
+    init: function() {
+      this.cacheDom();
+      this.bindEvents();
+    },
+
+    cacheDom: function() {
+      this.$exchangerInput = $(".exchanger-input");
+      this.$exchangerOutput = $(".exchanger-output");
+      this.$currencyInput = $(".currency-input");
+      this.$currencyOutput = $(".currency-output");
+    },
+
+    bindEvents: function(){
+      this.$currencyInput.on("input", this.makeRequest.bind(this, this.$currencyInput, this.$exchangerInput, this.$currencyOutput, this.$exchangerOutput));
+      this.$currencyOutput.on("input", this.makeRequest.bind(this, this.$currencyOutput, this.$exchangerOutput, this.$currencyInput, this.$exchangerInput));
+    },
+
+    makeRequest: function(input, inputCurrency, output, outputCurrency) {
+      var req = $.ajax({
+        url: "https://api.fixer.io/latest?base=" + inputCurrency.val()
+      });
+      req.done(function(data){
+        fx.base = data.base;
+        fx.rates = data.rates;
+        var change = fx.convert(input.val(), {from: inputCurrency.val(), to: outputCurrency.val()});
+        output.val(change.toFixed(2));
+      }.bind(this));
+    }
+
+  }
+  currencyExchanger.init();
+
+  //console.log(fx.convert(12.99, {from: "GBP", to: "HKD"}));
 })();
