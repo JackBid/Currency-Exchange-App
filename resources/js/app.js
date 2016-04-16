@@ -60,6 +60,8 @@
     bindEvents: function(){
       this.$currencyInput.on("input", this.makeRequest.bind(this, this.$currencyInput, this.$exchangerInput, this.$currencyOutput, this.$exchangerOutput));
       this.$currencyOutput.on("input", this.makeRequest.bind(this, this.$currencyOutput, this.$exchangerOutput, this.$currencyInput, this.$exchangerInput));
+      this.$exchangerInput.on("input", this.makeRequest.bind(this, this.$currencyInput, this.$exchangerInput, this.$currencyOutput, this.$exchangerOutput));
+      this.$exchangerOutput.on("input", this.makeRequest.bind(this, this.$currencyOutput, this.$exchangerOutput, this.$currencyInput, this.$exchangerInput));
     },
 
     makeRequest: function(input, inputCurrency, output, outputCurrency) {
