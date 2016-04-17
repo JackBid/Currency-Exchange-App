@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <title>currency converter</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
 </head>
 <body>
   <div class="container">
@@ -60,75 +62,78 @@
         <div class="exchanger">
           <h3>Convert Money Types</h3>
           <form>
-            <input class="currency-input" type="text"></input>
-            <select class="exchanger-input">
-              <option value="GBP">GBP</option>
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="AUD">AUD</option>
-              <option value="BRL">BRL</option>
-              <option value="CAD">CAD</option>
-              <option value="CHF">CHF</option>
-              <option value="CNY">CNY</option>
-              <option value="CZK">CZK</option>
-              <option value="DKK">DKK</option>
-              <option value="HKD">HKD</option>
-              <option value="HRK">HRK</option>
-              <option value="HUF">HUF</option>
-              <option value="IDR">IDR</option>
-              <option value="ILS">ILS</option>
-              <option value="INR">INR</option>
-              <option value="JPY">JPY</option>
-              <option value="KRW">KRW</option>
-              <option value="MXN">MXN</option>
-              <option value="MYR">MYR</option>
-              <option value="NOK">NOK</option>
-              <option value="NZD">NZD</option>
-              <option value="PHP">PHP</option>
-              <option value="PLN">PLN</option>
-              <option value="RON">RON</option>
-              <option value="RUB">RUB</option>
-              <option value="SEK">SEK</option>
-              <option value="SGD">SGD</option>
-              <option value="THB">THB</option>
-              <option value="TRY">TRY</option>
-              <option value="ZAR">ZAR</option>
-            </select>
-            <input class="currency-output" type="text"></input>
-            <select class="exchanger-output">
-              <option value="GBP">GBP</option>
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="AUD">AUD</option>
-              <option value="BRL">BRL</option>
-              <option value="CAD">CAD</option>
-              <option value="CHF">CHF</option>
-              <option value="CNY">CNY</option>
-              <option value="CZK">CZK</option>
-              <option value="DKK">DKK</option>
-              <option value="HKD">HKD</option>
-              <option value="HRK">HRK</option>
-              <option value="HUF">HUF</option>
-              <option value="IDR">IDR</option>
-              <option value="ILS">ILS</option>
-              <option value="INR">INR</option>
-              <option value="JPY">JPY</option>
-              <option value="KRW">KRW</option>
-              <option value="MXN">MXN</option>
-              <option value="MYR">MYR</option>
-              <option value="NOK">NOK</option>
-              <option value="NZD">NZD</option>
-              <option value="PHP">PHP</option>
-              <option value="PLN">PLN</option>
-              <option value="RON">RON</option>
-              <option value="RUB">RUB</option>
-              <option value="SEK">SEK</option>
-              <option value="SGD">SGD</option>
-              <option value="THB">THB</option>
-              <option value="TRY">TRY</option>
-              <option value="ZAR">ZAR</option>
-            </select>
-
+            <div class="exchanger-input-container">
+              <input class="currency-input" type="text"></input>
+              <select class="exchanger-input">
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="BRL">BRL</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PHP">PHP</option>
+                <option value="PLN">PLN</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="ZAR">ZAR</option>
+              </select>
+            </div>
+            <div class="exchanger-output-container">
+              <input class="currency-output" type="text"></input>
+              <select class="exchanger-output">
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="BRL">BRL</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PHP">PHP</option>
+                <option value="PLN">PLN</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="ZAR">ZAR</option>
+              </select>
+          </div>
           </form>
         </div>
       </div>
